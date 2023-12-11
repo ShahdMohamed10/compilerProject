@@ -9,6 +9,9 @@ function Project() {
   const sendData = async () => {
     try {
       const response = await axios.post('http://localhost:5000/match', {
+        headers: {
+            'Content-Type': 'text/plain'
+        },
         input: inputString,
       });
   
